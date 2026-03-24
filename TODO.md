@@ -34,3 +34,16 @@
 ## Proyectos Section ✅ Complete!
 
 **Status**: Hero + Sobre mí + Proyectos done
+
+## tab_ Section - Steps:
+- [x] Step 1: CSS initial states (.service)
+
+- [x] Step 2: JS timeline
+
+- [x] Step 3: Test
+
+## tab_ Section ✅ Complete!
+
+**Status**: Hero, Sobre mí, Proyectos, tab_ done
+
+

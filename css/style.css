@@ -355,6 +355,8 @@ img {
     color: #666;
     margin-bottom: 4rem;
     font-weight: 300;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .tab-content {
@@ -376,6 +378,8 @@ img {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.2);
     transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateX(-50px);
 }
 
 .service:hover {
@@ -397,6 +401,8 @@ img {
     font-size: 1.75rem;
     margin-bottom: 2rem;
     color: #000;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .btn-large {

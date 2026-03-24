@@ -197,6 +197,38 @@ proyectosTl
         ease: 'power2.out'
     }, '-=0.5');
 
+// tab_ GSAP Animation
+const tabTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#tab',
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+    }
+});
+
+tabTl
+    .fromTo('#tab .section-title',
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+    )
+    .fromTo('.section-subtitle',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.3'
+    )
+    .to('.service', {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power2.out'
+    }, '-=0.5')
+    .to('.tab-cta h3', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out'
+    }, '-=0.8');
+
 // Parallax effect for hero image - DISABLED per user request
 // window.addEventListener('scroll', () => {
 //     const scrolled = window.pageYOffset;
