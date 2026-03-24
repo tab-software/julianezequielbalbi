@@ -219,6 +219,8 @@ img {
     margin-bottom: 4rem;
     color: #000;
     letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 /* Sobre mí */
@@ -235,6 +237,8 @@ img {
     line-height: 1.8;
     margin-bottom: 1.5rem;
     color: #444;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .sobre-mi-text strong {
@@ -250,6 +254,8 @@ img {
 
 .stat {
     text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
 }
 
 .stat-number {

@@ -11,6 +11,15 @@
 
 ## Hero Section ✅ Complete!
 
-**Next**: Ready for other sections (e.g., Sobre mí, Proyectos). Let me know when to proceed.
+## Sobre mí Section - Steps:
+- [x] Step 1: Add CSS initial states
 
-**Final Status**: Hero GSAP animations implemented successfully.
+- [x] Step 2: Add GSAP timeline to js/script.js
+
+- [x] Step 3: Test
+
+## Sobre mí Section ✅ Complete!
+ 
+ **Next sections available**: Proyectos, tab_, etc.
+ 
+ **Status**: Hero + Sobre mí done

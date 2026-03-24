@@ -146,6 +146,35 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     }, 1500);
 });
 
+// Sobre mí GSAP Animation
+const sobreTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#sobre-mi',
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+    }
+});
+
+sobreTl
+    .fromTo('#sobre-mi .section-title',
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+    )
+    .to('.sobre-mi-text p', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power2.out'
+    }, '-=0.5')
+    .to('.stat', {
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'back.out(1.7)'
+    }, '-=0.5');
+
 // Parallax effect for hero image - DISABLED per user request
 // window.addEventListener('scroll', () => {
 //     const scrolled = window.pageYOffset;
@@ -154,3 +183,4 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
 //         heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
 //     }
 // });
+
