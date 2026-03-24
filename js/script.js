@@ -65,59 +65,151 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Hero GSAP Animation
-const heroTl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.hero',
-        start: 'top 80%',
-        toggleActions: 'play none none reverse'
-    }
-});
+// Responsive GSAP with matchMedia
+const mm = gsap.matchMedia();
 
-heroTl
-    .fromTo('.hero-title', 
-        { opacity: 0, y: 100 }, 
-        { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' }
-    )
-    .fromTo('.hero-subtitle', 
-        { opacity: 0, y: 50 }, 
-        { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }, '-=0.5'
-    )
-    .to('.hero-buttons', {
-        opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'back.out(1.7)'
-    }, '-=0.8')
-    .fromTo('.image-placeholder', 
-        { opacity: 0, scale: 1.2, rotationY: -15 }, 
-        { opacity: 1, scale: 1, rotationY: 0, duration: 1.5, ease: 'power3.out' }, '-=1'
-    );
-
-// Set initial state for buttons
-gsap.set('.hero-buttons', { opacity: 0, scale: 0.8 });
-
-// Keep existing observer for other sections (not Hero)
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+// Hero
+mm.add("(min-width: 768px)", () => {
+    const heroTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
         }
     });
-}, observerOptions);
+    
+    heroTl
+        .fromTo('.hero-title', { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' })
+        .fromTo('.hero-subtitle', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }, '-=0.5')
+        .to('.hero-buttons', { opacity: 1, scale: 1, duration: 0.8, stagger: 0.2, ease: 'back.out(1.7)' }, '-=0.8')
+        .fromTo('.image-placeholder', { opacity: 0, scale: 1.2, rotationY: -15 }, { opacity: 1, scale: 1, rotationY: 0, duration: 1.5, ease: 'power3.out' }, '-=1');
+    
+    return () => heroTl.kill(); // Cleanup
+});
 
-document.querySelectorAll('.obra-card, .escrito-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+mm.add("(max-width: 767px)", () => {
+    const heroTlMobile = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top 95%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+    
+    heroTlMobile
+        .fromTo('.hero-title', { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' })
+        .fromTo('.hero-subtitle', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.4')
+        .to('.hero-buttons', { opacity: 1, scale: 1, duration: 0.6, stagger: 0.15, ease: 'back.out(1.7)' }, '-=0.6')
+        .fromTo('.image-placeholder', { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, duration: 1.2, ease: 'power3.out' }, '-=0.8');
+    
+    return () => heroTlMobile.kill();
+});
+
+
+
+// Sobre mí responsive
+mm.add("(min-width: 768px)", () => {
+    const sobreTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#sobre-mi',
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+    
+    sobreTl
+        .fromTo('#sobre-mi .section-title', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' })
+        .to('.sobre-mi-text p', { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }, '-=0.5')
+        .to('.stat', { opacity: 1, scale: 1, duration: 0.8, stagger: 0.2, ease: 'back.out(1.7)' }, '-=0.5');
+    
+    return () => sobreTl.kill();
+});
+
+mm.add("(max-width: 767px)", () => {
+    const sobreTlMobile = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#sobre-mi',
+            start: 'top 95%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+    
+    sobreTlMobile
+        .fromTo('#sobre-mi .section-title', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' })
+        .to('.sobre-mi-text p', { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out' }, '-=0.4')
+        .to('.stat', { opacity: 1, scale: 1, duration: 0.6, stagger: 0.15, ease: 'back.out(1.7)' }, '-=0.4');
+    
+    return () => sobreTlMobile.kill();
+});
+
+// Proyectos responsive
+mm.add("(min-width: 768px)", () => {
+    const proyectosTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#proyectos',
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+    
+    proyectosTl
+        .fromTo('#proyectos .section-title', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' })
+        .to('.proyecto-card', { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: 'power2.out' }, '-=0.5');
+    
+    return () => proyectosTl.kill();
+});
+
+mm.add("(max-width: 767px)", () => {
+    const proyectosTlMobile = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#proyectos',
+            start: 'top 95%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+    
+    proyectosTlMobile
+        .fromTo('#proyectos .section-title', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' })
+        .to('.proyecto-card', { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: 'power2.out' }, '-=0.4');
+    
+    return () => proyectosTlMobile.kill();
+});
+
+// tab_ responsive
+mm.add("(min-width: 768px)", () => {
+    const tabTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#tab',
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+    
+    tabTl
+        .fromTo('#tab .section-title', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' })
+        .fromTo('.section-subtitle', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.3')
+        .to('.service', { opacity: 1, x: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }, '-=0.5')
+        .to('.tab-cta h3', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.8');
+    
+    return () => tabTl.kill();
+});
+
+mm.add("(max-width: 767px)", () => {
+    const tabTlMobile = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#tab',
+            start: 'top 95%',
+            toggleActions: 'play none none reverse'
+        }
+    });
+    
+    tabTlMobile
+        .fromTo('#tab .section-title', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' })
+        .fromTo('.section-subtitle', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, '-=0.3')
+        .to('.service', { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out' }, '-=0.4')
+        .to('.tab-cta h3', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.4');
+    
+    return () => tabTlMobile.kill();
 });
 
 // Contact form
