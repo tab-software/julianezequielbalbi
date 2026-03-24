@@ -111,11 +111,11 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     }, 1500);
 });
 
-// Parallax effect for hero image
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.image-placeholder');
-    if (heroImage) {
-        heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Parallax effect for hero image - DISABLED per user request
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const heroImage = document.querySelector('.image-placeholder');
+//     if (heroImage) {
+//         heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+//     }
+// });
