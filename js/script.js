@@ -175,6 +175,28 @@ sobreTl
         ease: 'back.out(1.7)'
     }, '-=0.5');
 
+// Proyectos GSAP Animation
+const proyectosTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#proyectos',
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+    }
+});
+
+proyectosTl
+    .fromTo('#proyectos .section-title',
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+    )
+    .to('.proyecto-card', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power2.out'
+    }, '-=0.5');
+
 // Parallax effect for hero image - DISABLED per user request
 // window.addEventListener('scroll', () => {
 //     const scrolled = window.pageYOffset;

@@ -22,4 +22,15 @@
  
  **Next sections available**: Proyectos, tab_, etc.
  
- **Status**: Hero + Sobre mí done
+**Status**: Hero + Sobre mí done
+
+## Proyectos Section - Steps:
+- [x] Step 1: CSS initial states for proyecto-card
+
+- [x] Step 2: JS GSAP timeline (cards stagger)
+
+- [x] Step 3: Test
+
+## Proyectos Section ✅ Complete!
+
+**Status**: Hero + Sobre mí + Proyectos done

@@ -288,6 +288,8 @@ img {
     box-shadow: 0 20px 60px rgba(0,0,0,0.1);
     transition: all 0.4s ease;
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .proyecto-card:hover,
