@@ -121,6 +121,8 @@ body {
     margin-bottom: 1rem;
     color: #000;
     letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 .hero-subtitle {
@@ -128,11 +130,15 @@ body {
     color: #666;
     font-weight: 300;
     margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
+    opacity: 0;
+    transform: scale(0.8);
 }
 
 .btn-primary,
@@ -182,7 +188,8 @@ body {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 50px 100px rgba(0,0,0,0.1);
-    transition: transform 0.5s ease;
+    opacity: 0;
+    transform: scale(1.2) rotateY(-15deg);
 }
 
 /* .image-placeholder:hover {
