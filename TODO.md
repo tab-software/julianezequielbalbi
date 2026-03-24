@@ -57,5 +57,21 @@
 
 **Status**: Hero, Sobre mí, Proyectos, tab_, Galería done
 
+## Contacto Section - Steps:
+- [x] Step 1: CSS states (.contact-info p, .social-links a, form inputs)
+
+- [x] Step 2: JS timeline
+
+- [x] Step 3: Test
+## Contacto Section ✅ Complete! 🎉
+
+**ALL SECTIONS ANIMATED WITH GSAP!**
+
+- Hero, Sobre mí, Proyectos, tab_, Galería, Contacto
+
+Smooth ScrollTrigger staggers throughout.
+
+
+
 
 

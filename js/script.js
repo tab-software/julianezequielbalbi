@@ -255,6 +255,43 @@ galeriaTl
         ease: 'back.out(1.7)'
     }, '-=0.5');
 
+// Contacto GSAP Animation
+const contactoTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#contacto',
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+    }
+});
+
+contactoTl
+    .fromTo('#contacto .section-title',
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+    )
+    .to('.contact-info p, .contact-email', {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'power2.out'
+    }, '-=0.3')
+    .to('.social-links a', {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: 'back.out(1.7)'
+    }, '-=0.5')
+    .to('.contact-form input, .contact-form textarea, .contact-form button', {
+        opacity: 1,
+        x: 0,
+        duration: 0.7,
+        stagger: 0.1,
+        ease: 'power2.out'
+    }, '-=0.8');
+
 // Parallax effect for hero image - DISABLED per user request
 // window.addEventListener('scroll', () => {
 //     const scrolled = window.pageYOffset;
