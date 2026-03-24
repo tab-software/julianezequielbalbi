@@ -46,4 +46,16 @@
 
 **Status**: Hero, Sobre mí, Proyectos, tab_ done
 
+## Galería Section - Steps:
+- [x] Step 1: CSS .foto-item states (already has observer, override/add GSAP)
+
+- [x] Step 2: JS timeline
+
+- [x] Step 3: Test
+
+## Galería Section ✅ Complete!
+
+**Status**: Hero, Sobre mí, Proyectos, tab_, Galería done
+
+
 

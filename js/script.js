@@ -113,7 +113,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-document.querySelectorAll('.obra-card, .escrito-card, .foto-item').forEach(el => {
+document.querySelectorAll('.obra-card, .escrito-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -228,6 +228,32 @@ tabTl
         duration: 0.8,
         ease: 'power2.out'
     }, '-=0.8');
+
+// Galería GSAP Animation
+const galeriaTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#galeria',
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+    }
+});
+
+galeriaTl
+    .fromTo('#galeria .section-title',
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+    )
+    .to('.foto-item', {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: {
+            amount: 0.5,
+            from: 'left'
+        },
+        ease: 'back.out(1.7)'
+    }, '-=0.5');
 
 // Parallax effect for hero image - DISABLED per user request
 // window.addEventListener('scroll', () => {
