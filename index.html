@@ -1,214 +1,360 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julian Balbi - Soluciones Digitales & Audiovisuales</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio personal de Julián Ezequiel Balbi — actor, estudiante de idiomas, creador de contenido y diseñador web.">
+  <title>Julián Ezequiel Balbi — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">
-                <h1>JB</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                <li><a href="#tab" class="nav-link">tab_</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h2 class="hero-title">Julian Balbi</h2>
-                <p class="hero-subtitle">Diseñador Multimedial | tab_ Solutions</p>
-                <div class="hero-buttons">
-                    <a href="#sobre-mi" class="btn-primary">Sobre mí</a>
-                    <a href="#tab" class="btn-secondary">Ver tab_</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-placeholder">
-                    <img src="images/perfil.png" alt="Julian Balbi">
-                </div>
-            </div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span>JEB</span><small>Julián Ezequiel Balbi</small>
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#actor">Actor</a>
+      <a href="#idiomas">Idiomas</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Qué hago</a>
+      <a class="nav-cta" href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">ACTOR · IDIOMAS · CREADOR · WEB</p>
+        <h1>Julián<br><em>Ezequiel</em><br>Balbi.</h1>
+        <p class="hero-text">
+          Una vida construida entre el escenario, los idiomas, el audiovisual
+          y el mundo digital. Este portfolio reúne lo que aprendí, lo que hago
+          y hacia dónde quiero seguir creciendo.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#actor">Ver portfolio</a>
+          <a class="btn btn-ghost" href="#sobre-mi">Conoceme →</a>
         </div>
+
+        <div class="hero-meta">
+          <span>📍 La Plata, Argentina</span>
+          <span>Disponible para proyectos</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="portrait-frame">
+  <img src="assets/yo.png" alt="Julián Ezequiel Balbi">
+</div>
+        <div class="floating-note note-one">ACTOR</div>
+        <div class="floating-note note-two">SPANISH · ENGLISH · ITALIAN · PORTUGUESE · DEUTSCH</div>
+        <div class="vertical-label">PORTFOLIO / 2026</div>
+      </div>
     </section>
 
-    <!-- Sobre mí Section -->
-    <section id="sobre-mi" class="section sobre-mi">
-        <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <div class="sobre-mi-content">
-                <div class="sobre-mi-text">
-                    <p><strong>Trilingüe:</strong> Inglés (instituto + Duolingo 1400 días 🔥), Portugués fluido, Español nativo.</p>
-                    <p>Música en todos los idiomas: inglés, portugués, alemán, francés, italiano, árabe, catalán... depende del día 🎵</p>
-                    <p>Mate con mi mate ☕, café, cocino, helado fanático 🍦</p>
-                    <p>Soltero, vivo solo, sin mascotas 🏠</p>
-                    <p><strong>Trabajo:</strong> Con mi papá en <strong>tab_</strong> - Soluciones digitales y medios audiovisuales 💻</p>
-                    <p>Youtube adicto 📺, mantras indios 🕉️,🚀</p>
-                    <p><strong>Aventuras:</strong> Esquí ⛷️, buceo 🐠, playa 🏖️, montaña 🏔️, natación 🏊, Fortnite 🎮</p>
-                </div>
-                <div class="sobre-mi-stats">
-                    <div class="stat">
-                        <span class="stat-number">1400+</span>
-                        <span class="stat-label">Días Duolingo</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Idiomas</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">tab_</span>
-                        <span class="stat-label">Mi empresa</span>
-                    </div>
-                </div>
-            </div>
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="section about">
+      <div class="section-heading reveal">
+        <span class="section-number">01</span>
+        <div>
+          <p class="eyebrow">LA PERSONA DETRÁS DEL PORTFOLIO</p>
+          <h2>Una historia<br><em>en movimiento.</em></h2>
         </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">
+            Soy <strong>Julián Ezequiel Balbi</strong>. Me interesa combinar
+            interpretación, comunicación, idiomas, tecnología y creación de contenido.
+          </p>
+          <p>
+            Estudié teatro durante cuatro años y esa experiencia me enseñó a trabajar
+            con el cuerpo, la voz, la presencia y la construcción de personajes.
+            También estudié inglés y portugués, durante mi infancia, incluyendo lecturas de autores como Hermann Hesse y motivandome a aprender Alemán y leer sobre psicología con Carl Gustav Jung y cada vez que podía adquirir sus volúmenes en Inglés o Portugués en alguna vacación a dichos países, luego intentando expandir hacia el Italiano, me compré una novela poética... o el SteppenWolf (el Lobo estepário de Hesse) y sigo ampliando mi formación con italiano y alemán. Quedaron varados otros como Francés, Arabe, Chino, Japonés... pero algo los abordé.
+            Actuamente puede decirse que soy Trilingue: Español, Portugués e Inglés.
+            Está en desarrollo la película Por Propia Decisión, y participé de otra película como extra. Me está gustando mucho más el Cine o Audiovisual que el teatro. Pero bueno también me gustaría volver a crear material teatral y presentar en teatros nuevamente.
+          </p>
+          <p>
+            En paralelo, trabajo en el universo digital: participo en <strong>tab_</strong>,
+            donde desarrollo sitios web, y en proyectos audiovisuales junto a
+            <strong>Diagonales Studios</strong>.
+          </p>
+          <blockquote>
+            “No quiero que mi portfolio muestre solamente lo que hice.
+            Quiero que muestre todo lo que todavía puedo hacer.”
+          </blockquote>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <span>01</span>
+            <div><strong>Teatro</strong><small>4 años de formación actoral</small></div>
+          </div>
+          <div class="timeline-item">
+            <span>02</span>
+            <div><strong>Idiomas</strong><small>Inglés B1+ · Italiano A1 · Alemán A1</small></div>
+          </div>
+          <div class="timeline-item">
+            <span>03</span>
+            <div><strong>Tecnología</strong><small>Diseño y desarrollo web · tab_</small></div>
+          </div>
+          <div class="timeline-item">
+            <span>04</span>
+            <div><strong>Audiovisual</strong><small>Contenido, video y proyectos creativos</small></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Proyectos Section -->
-    <section id="proyectos" class="section proyectos">
-        <div class="container">
-            <h2 class="section-title">Proyectos</h2>
-            <div class="grid proyectos-grid">
-                <div class="proyecto-card">
-                    <div class="proyecto-image">
-                        <img src="images/pelicula.jpg" alt="Herencia">
-                    </div>
-                    <div class="proyecto-content">
-                        <h3>Herencia</h3>
-                        <p><strong>Cortometraje:</strong> Su padre le regala un negocio para poner a prueba su capacidad de adaptación y ver si es digno de su fortuna. Dirigí, produje y edité.</p>
-                        <span class="role">Director • Productor • Editor</span>
-                    </div>
-                </div>
-                <div class="proyecto-card">
-                    <div class="proyecto-image">
-                        <img src="images/drone.jpg" alt="Portfolio Personal">
-                    </div>
-                    <div class="proyecto-content">
-                        <h3>Drone</h3>
-                        <p>Vuelos fotograficos personalizados con drone para tu empresa.</p>
-                        <span class="role">Full Stack Developer</span>
-                    </div>
-                </div>
-                <div class="proyecto-card">
-                    <div class="proyecto-image">
-                        <img src="images/tab.jpg" alt="Promo tab_">
-                    </div>
-                    <div class="proyecto-content">
-                        <h3>Promo tab_</h3>
-                        <p>Video promocional para mi empresa de soluciones digitales y audiovisuales.</p>
-                        <span class="role">Videógrafo • Motion Graphics</span>
-                    </div>
-                </div>
-            </div>
+    <!-- ACTOR -->
+    <section id="actor" class="section actor-section">
+      <div class="section-heading reveal">
+        <span class="section-number">02</span>
+        <div>
+          <p class="eyebrow">ACTOR / PERFORMANCE</p>
+          <h2>Frente a cámara.<br><em>Sobre el escenario.</em></h2>
         </div>
+      </div>
+
+      <div class="actor-intro reveal">
+        <p>
+Empecé a filmar una película, soy el actor principal. Un nombre posible es Por Propia Decisión. Soy dueño de un Bar llamado FOOD, ya que mi padre me da este espacio para aprender a emprender la vida. Me llamo Matias. Mi papá Franco. Tengo madrastra, se llama Debora, la cual me viene a increpar o amenazar ya ue ve que no estoy haciendo buen uso del Bar y ella quiere preservar el Patrimonio.
+
+Al cabo de un tiempo empiezo a mejorar el Bar.
+una historia con conflicto emocional, crecimiento personal y un escenario visual fuerte: un bar como metáfora de identidad y maduración.
+        </p>
+        <span class="tag">Por Propia Decisión</span>
+        <span class="tag">Backstage</span>
+        <span class="tag">2025</span>
+      </div>
+
+      <div id="actorGallery" class="portfolio-grid">
+
+  <!-- FOTO 1 -->
+  <article class="portfolio-card large reveal">
+    <img src="assets/actor-00.jpg" alt="Julián Ezequiel Balbi - Portfolio actoral">
+    <div class="card-overlay">
+      <span>01 / ACTOR</span>
+      <h3>Portfolio actoral</h3>
+      <p>Fotografía actoral y presentación.</p>
+    </div>
+  </article>
+
+  <!-- FOTO 2 -->
+  <article class="portfolio-card reveal">
+    <img src="assets/actor-02.jpg" alt="Julián Ezequiel Balbi - Actor">
+    <div class="card-overlay">
+      <span>02 / ACTOR</span>
+      <h3>Personaje</h3>
+      <p>Fotografía / personaje.</p>
+    </div>
+  </article>
+
+  <!-- FOTO 3 -->
+  <article class="portfolio-card reveal">
+    <img src="assets/actor-03.jpg" alt="Julián Ezequiel Balbi - Escena">
+    <div class="card-overlay">
+      <span>03 / ESCENA</span>
+      <h3>Escena teatral</h3>
+      <p>Trabajo sobre escenario.</p>
+    </div>
+  </article>
+
+  <!-- FOTO / REEL 4 -->
+  <article class="portfolio-card wide reveal">
+    <img src="assets/actor-04.jpg" alt="Julián Ezequiel Balbi - Proyecto audiovisual">
+    <div class="card-overlay">
+      <span>04 / AUDIOVISUAL</span>
+      <h3>Proyecto audiovisual</h3>
+      <p>Escena, reel o producción audiovisual.</p>
+    </div>
+  </article>
+
+</div>
+
+    <!-- IDIOMAS / DUOLINGO -->
+    <section id="idiomas" class="section languages-section">
+      <div class="section-heading reveal">
+        <span class="section-number">03</span>
+        <div>
+          <p class="eyebrow">LANGUAGES / LEARNING</p>
+          <h2>Aprender también<br><em>es parte del viaje.</em></h2>
+        </div>
+      </div>
+
+      <div class="languages-layout">
+        <div class="language-cards reveal">
+          <div class="language-card main-language">
+            <div class="lang-top"><span>🇬🇧 ENGLISH</span><b>B1+</b></div>
+            <div class="meter"><i style="width: 72%"></i></div>
+            <p>Estudiando actualmente · British Institute</p>
+            <a href="https://www.cambridgeenglish.org/es/" target="_blank" rel="noopener">Cambridge English ↗</a>
+          </div>
+
+          <div class="language-card">
+            <div class="lang-top"><span>🇮🇹 ITALIANO</span><b>A1</b></div>
+            <div class="meter"><i style="width: 30%"></i></div>
+            <p>Base inicial · objetivo: seguir avanzando</p>
+          </div>
+
+          <div class="language-card">
+            <div class="lang-top"><span>🇩🇪 DEUTSCH</span><b>A1</b></div>
+            <div class="meter"><i style="width: 25%"></i></div>
+            <p>Base inicial · objetivo: seguir avanzando</p>
+          </div>
+
+          <div class="certificate-card">
+            <span>CAMBRIDGE</span>
+            <strong>A2 · 133</strong>
+            <small>Certificación / resultado</small>
+          </div>
+        </div>
+
+        <div class="duolingo-card reveal">
+          <div class="duo-header">
+            <span class="duo-logo">duolingo</span>
+            <span class="duo-leaf">●</span>
+          </div>
+
+          <p class="duo-kicker">MI CONSTANCIA</p>
+          <div class="streak">
+            <span class="flame">🔥</span>
+            <strong id="streakNumber">000</strong>
+            <span>días</span>
+          </div>
+          <p class="duo-copy">
+JulianEzequiel24          </p>
+          <a class="duo-button" href="https://www.duolingo.com/profile/JulianEzequiel24" target="_blank" rel="noopener">
+            Ver perfil de Duolingo ↗
+          </a>
+          <div class="duo-stat-row">
+            <div><b>🇬🇧</b><small>English</small></div>
+            <div><b>🇮🇹</b><small>Italiano</small></div>
+            <div><b>🇩🇪</b><small>Deutsch</small></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- tab_ Section -->
-    <section id="tab" class="section tab">
-        <div class="container">
-            <h2 class="section-title">tab_</h2>
-            <p class="section-subtitle">Soluciones digitales y medios audiovisuales</p>
-            <div class="tab-content">
-                <div class="tab-services">
-                    <div class="service">
-                        <h3>🎬 Producción Audiovisual</h3>
-                        <p>Videos promocionales, cortometrajes, motion graphics</p>
-                    </div>
-                    <div class="service">
-                        <h3>💻 Desarrollo Web</h3>
-                        <p>Sitios modernos, responsive, minimalistas</p>
-                    </div>
-                    <div class="service">
-                        <h3>📱 Diseño Digital</h3>
-                        <p>Branding, UI/UX, identidad visual</p>
-                    </div>
-                </div>
-                <div class="tab-cta">
-                    <h3>¿Necesitas soluciones digitales?</h3>
-                    <a href="#contacto" class="btn-primary btn-large">Empecemos tu proyecto</a>
-                </div>
-            </div>
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section projects-section">
+      <div class="section-heading reveal">
+        <span class="section-number">04</span>
+        <div>
+          <p class="eyebrow">DIGITAL / AUDIOVISUAL</p>
+          <h2>También creo<br><em>fuera del escenario.</em></h2>
         </div>
+      </div>
+
+      <div class="project-grid">
+        <a class="project-card tab-project reveal" href="https://tab.ar/" target="_blank" rel="noopener">
+          <span class="project-index">01</span>
+          <div>
+            <small>WEB DESIGN / DEVELOPMENT</small>
+            <h3>tab_</h3>
+            <p>Diseño y desarrollo de páginas web, experiencias digitales y proyectos creativos.</p>
+          </div>
+          <span class="project-arrow">↗</span>
+        </a>
+
+        <div class="project-card diagonal-project reveal">
+          <span class="project-index">02</span>
+          <div>
+            <small>AUDIOVISUAL / CONTENT</small>
+            <h3>Diagonales Studios</h3>
+            <p>Producción, videos, contenido y proyectos audiovisuales.</p>
+            <a class="project-card diagonal-project reveal"   href="https://diagonales-studios.tab.ar/"   target="_blank"   rel="noopener">
+          </div>
+          <span class="project-arrow">+</span>
+        </div>
+
+        <div class="project-card creative-project reveal">
+          <span class="project-index">03</span>
+          <div>
+            <small>CREATIVE PROJECTS</small>
+            <h3>Ideas que se vuelven experiencias.</h3>
+            <p>Diseño, storytelling, contenido, identidad visual y experimentación digital.</p>
+          </div>
+          <span class="project-arrow">✦</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Galería -->
-    <section id="galeria" class="section galeria">
-        <div class="container">
-            <h2 class="section-title">Galería</h2>
-            <div class="fotos-grid">
-                <div class="foto-item">
-                    <img src="images/fotos/duolingo.jpg" alt="1400 días Duolingo">
-                </div>
-                <div class="foto-item">
-                    <img src="images/fotos/mate.jpg" alt="Mate time">
-                </div>
-                <div class="foto-item">
-                    <img src="images/fotos/esqui.jpg" alt="Esquí">
-                </div>
-                <div class="foto-item">
-                    <img src="images/fotos/buceo.jpg" alt="Buceo">
-                </div>
-                <div class="foto-item">
-                    <img src="images/fotos/playa.jpg" alt="Playa">
-                </div>
-                <div class="foto-item">
-                    <img src="images/fotos/montana.jpg" alt="Montaña">
-                </div>
-            </div>
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section skills-section">
+      <div class="section-heading reveal">
+        <span class="section-number">05</span>
+        <div>
+          <p class="eyebrow">SKILLS</p>
+          <h2>¿Qué puedo<br><em>hacer?</em></h2>
         </div>
+      </div>
+
+      <div class="skills-list reveal">
+        <div class="skill"><span>01</span><strong>Actuación</strong><small>Teatro · personaje · cámara · presencia</small></div>
+        <div class="skill"><span>02</span><strong>Idiomas</strong><small>Español · English B1+ · Italiano A1 · Deutsch A1</small></div>
+        <div class="skill"><span>03</span><strong>Conducción</strong><small>Presentación · comunicación · cámara</small></div>
+        <div class="skill"><span>04</span><strong>Manejo</strong><small>Conducción de vehículo — editar según corresponda</small></div>
+        <div class="skill"><span>05</span><strong>Web</strong><small>HTML · CSS · JavaScript · diseño de sitios</small></div>
+        <div class="skill"><span>06</span><strong>Audiovisual</strong><small>Video · contenido · edición · narrativa visual</small></div>
+      </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section contacto">
-        <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>¿Proyecto audiovisual o digital?</p>
-                    <p class="contact-email">hola@tab-solutions.com</p>
-                <div class="social-links">
-                    <a href="https://instagram.com/julianbalbi" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com/in/julianbalbi" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://youtube.com/@julianbalbi" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Tu nombre" required>
-                    <input type="email" placeholder="Tu email" required>
-                    <textarea placeholder="Tu proyecto..." rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar mensaje</button>
-                </form>
-            </div>
+    <!-- CV -->
+    <section class="section cv-section">
+      <div class="cv-panel reveal">
+        <div>
+          <p class="eyebrow">CURRICULUM</p>
+          <h2>Una página no alcanza para contar una vida.</h2>
+          <p>
+            Prepará una versión PDF de tu CV para que productoras, directores,
+            clientes o colaboradores puedan verla rápidamente.
+          </p>
         </div>
+        <a class="btn btn-light" href="assets/CV-Julian-Balbi.pdf" target="_blank">Ver CV ↗</a>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Julian Balbi - tab_. Todos los derechos reservados.</p>
-    </footer>
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact-section">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">LET'S CREATE SOMETHING</p>
+        <h2>¿Tenés un proyecto<br><em>para mí?</em></h2>
+        <p>Actor · creador · diseñador · estudiante de idiomas.</p>
 
-    <script src="js/script.js"></script>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:tuemail@ejemplo.com">Escribime</a>
+          <a class="btn btn-ghost" href="#inicio">Volver arriba ↑</a>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://www.duolingo.com/profile/JulianEzequiel24" target="_blank" rel="noopener">Duolingo</a>
+          <a href="https://tab.ar/" target="_blank" rel="noopener">tab_</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>JEB — Julián Ezequiel Balbi</span>
+    <span>Portfolio personal · 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
